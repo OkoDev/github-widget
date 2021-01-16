@@ -1,64 +1,105 @@
+:root {
+    --color-calendar-graph-day-bg: #ebedf0;
+    --color-calendar-graph-day-L1-bg: #9be9a8;
+    --color-calendar-graph-day-L2-bg: #40c463;
+    --color-calendar-graph-day-L3-bg: #30a14e;
+    --color-calendar-graph-day-L4-bg: #216e39;
+}
+
+.Box {
+    border: 1px solid rgba(0, 0, 0, 0.125);;
+    border-radius: 6px;
+    display: flex !important;
+    padding: 16px !important;
+    width: 100%;
+}
+
+.pinned-item-list-item-content > div {
+    align-items: center;
+}
+
+.js-calendar-graph-svg {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+@media (max-width: 1220px) {
+    .js-calendar-graph-svg {
+        display: none;
+    }
+}
+
 
 #github-widget .boxed-group > h3, .boxed-group .heading {
-    background-color: #F5F5F5;
-    margin: 0px;
-    border-radius: 3px 3px 0px 0px;
-    border-width: 1px 1px 0px;
+    background-color: #f5f5f5;
+    margin: 0;
+    border-radius: 3px 3px 0 0;
+    border-width: 1px 1px 0;
     border-style: solid solid none;
-    border-color: #D8D8D8;
+    border-color: #d8d8d8;
     border-image: none;
     padding: 9px 10px 10px;
     font-size: 14px;
-    font-family: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
-    font-weight: bold;
+    /*font-family: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, segoe ui emoji, segoe ui symbol;*/
+    font-weight: 700;
     line-height: 17px;
-    display: block;
+    display: block
 }
+
 #github-widget .boxed-group {
-    margin: 5px;
+    margin: 5px
 }
+
 #github-widget .boxed-group-inner {
     margin: 0;
-    padding: 0px;
-    background: #FFF none repeat scroll 0% 0%;
-    border: 1px solid #D8D8D8;
+    padding: 0;
+    background: #fff none repeat scroll 0% 0%;
+    border: 1px solid #d8d8d8;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     color: #666;
-    font-family: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
+    /*font-family: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, segoe ui emoji, segoe ui symbol;*/
     font-size: 13px;
     list-style: outside none none;
-    overflow: auto;
+    overflow: auto
 }
+
 #github-widget ul li {
-    list-style: outside none none;
+    list-style: outside none none
 }
+
 #github-widget .mini-repo-list > li:first-child .mini-repo-list-item {
-    border-top: 0 solid #E5E5E5;
+    border-top: 0 solid #e5e5e5
 }
+
 #github-widget ul li a {
-    border-top: 0px none;
+    border-top: 0;
     position: relative;
     display: block;
     padding: 6px 64px 6px 30px;
     font-size: 14px;
-    border-top: 1px solid #E5E5E5;
-    color: #4078C0;
-    text-decoration: none;
+    border-top: 1px solid #e5e5e5;
+    color: #4078c0;
+    text-decoration: none
 }
+
 #github-widget ul li a .repo-and-owner span {
-    color: #4078C0;
-    font-weight: bold
+    color: #4078c0;
+    font-weight: 700
 }
+
 #github-widget .no-description .mini-repo-list-item {
     padding-top: 17px;
-    padding-bottom: 16px;
+    padding-bottom: 16px
 }
+
 #github-widget .mini-repo-list-item .repo-icon {
     float: left;
     margin-top: 2px;
     margin-left: -20px;
-    color: #666;
+    color: #666
 }
 
 #github-widget ul li a .mini-repo-list-item .repo-and-owner {
@@ -67,171 +108,199 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    vertical-align: top;
+    vertical-align: top
 }
+
 #github-widget .mini-repo-list-item .stars {
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 10px;
     margin-top: 16px;
     font-size: 12px;
-    color: #888;
+    color: #888
 }
+
 #github-widget .mini-repo-list-item .repo-description {
     display: block;
     max-width: 100%;
     font-size: 12px;
     color: #767676;
-    line-height: 21px;
+    line-height: 21px
 }
+
 #github-widget .contrib-footer {
     font-size: 11px;
-    padding: 0 10px 12px;
+    padding: 0 10px 12px
 }
+
 #github-widget .text-muted {
-    color: #767676;
+    color: #767676
 }
+
 #github-widget .left {
-    float: left;
+    float: left
 }
+
 #github-widget .contrib-legend {
-    float: right;
+    float: right
 }
+
 #github-widget .contrib-legend .legend {
     display: inline-block;
     list-style: outside none none;
-    margin: 0px 5px;
+    margin: 0 5px;
     position: relative;
     bottom: -1px;
-    padding: 0;
+    padding: 0
 }
+
 #github-widget .contrib-legend .legend li {
     display: inline-block;
     width: 10px;
-    height: 10px;
+    height: 10px
 }
+
 #github-widget .contrib-column {
-    padding: 15px 0px;
+    padding: 15px 0;
     text-align: center;
-    border-left: 1px solid #DDD;
-    border-top: 1px solid #DDD;
-    font-size: 11px;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    font-size: 11px
 }
+
 #github-widget .contrib-column-first {
-    border-left: 0px none;
+    border-left: 0
 }
+
 #github-widget .table-column {
     display: table-cell;
     width: 1%;
     padding-right: 10px;
     padding-left: 10px;
-    vertical-align: top;
+    vertical-align: top
 }
+
 #github-widget .contrib-number {
     font-weight: 300;
     line-height: 1.3em;
     font-size: 24px;
     display: block;
-    color: #333;
+    color: #333
 }
+
 #github-widget .calendar-graph, text.month {
     font-size: 10px;
-    fill: #aaa;
+    fill: #aaa
 }
+
 #github-widget .calendar-graph, text.wday {
     fill: #ccc;
-    font-size: 9px;
+    font-size: 9px
 }
+
 #github-widget .clearfix:after {
     display: table;
     clear: both;
-    content: "";
+    content: ""
 }
 
 #github-widget .pinned-repos-list {
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:flex;
-    list-style:none;
-    -webkit-flex-wrap:wrap;
-    flex-wrap:wrap;
-    -webkit-box-pack:justify;
-    -webkit-justify-content:space-between;
-    justify-content:space-between
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    list-style: none;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between
 }
+
 #github-widget .pinned-repo-item {
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:flex;
-    width:339px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 339px
 }
+
 #github-widget .pinned-repo-item #github-widget .pinned-repository-handle {
-    padding-top:1px;
-    color:#767676
+    padding-top: 1px;
+    color: #767676
 }
+
 #github-widget .pinned-repo-item #github-widget .pinned-repository-handle:hover {
-    cursor:-webkit-grab;
-    cursor:grab
+    cursor: -webkit-grab;
+    cursor: grab
 }
-#github-widget .pinned-repo-item.is-dragging,#github-widget .pinned-repo-item.is-dragging #github-widget .pinned-repository-handle {
-    cursor:-webkit-grabbing;
-    cursor:grabbing
+
+#github-widget .pinned-repo-item.is-dragging, #github-widget .pinned-repo-item.is-dragging #github-widget .pinned-repository-handle {
+    cursor: -webkit-grabbing;
+    cursor: grabbing
 }
+
 #github-widget .pinned-repo-item.is-dragging {
-    background-color:#f2f8fa
+    background-color: #f2f8fa
 }
+
 #github-widget .pinned-repo-item.sortable-ghost {
-    background-color:#f2f8fa;
-    opacity:0
+    background-color: #f2f8fa;
+    opacity: 0
 }
+
 #github-widget .pinned-repo-item.empty {
-    border-style:dashed;
-    border-width:1px;
-    -webkit-box-align:center;
-    -webkit-align-items:center;
-    align-items:center;
-    -webkit-box-pack:center;
-    -webkit-justify-content:center;
-    justify-content:center
+    border-style: dashed;
+    border-width: 1px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center
 }
+
 #github-widget .pinned-repo-item-content {
-    display:-webkit-box;
-    display:-webkit-flex;
-    display:flex;
-    width:100%;
-    -webkit-box-orient:vertical;
-    -webkit-box-direction:normal;
-    -webkit-flex-direction:column;
-    flex-direction:column
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column
 }
-.pinned-item-desc {
-    -webkit-box-flex:1;
-    -webkit-flex:1 0 auto;
-    flex:1 0 auto
+
+#github-widget .pinned-item-desc {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto
 }
+
 #github-widget .repo-language-color {
-    position:relative;
-    top:1px;
-    display:inline-block;
-    width:12px;
-    height:12px;
-    margin-left:12px;
-    border-radius:50%
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: .5rem;
+    border-radius: 50%
 }
 
 #github-widget .rounded-1 {
-    border-radius: 3px !important;
+    border-radius: 3px !important
 }
+
 #github-widget .border-gray-dark {
-    border-color: #ddd !important;
+    border-color: #ddd !important
 }
+
 #github-widget .border {
-    border: 1px #e5e5e5 solid !important;
+    border: 1px #e5e5e5 solid !important
 }
 
 #github-widget .p-3 {
-    padding: 12px !important;
+    padding: 12px !important
 }
+
 #github-widget .mb-3 {
-    margin-bottom: 12px !important;
+    margin-bottom: 12px !important
 }
